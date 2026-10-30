@@ -1,0 +1,67 @@
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Підключення власного CSS -->
+<link rel="stylesheet" href="style.css">
+<div class="container mt-5">
+    <h1 class="text-center mb-4">
+        Мій щоденний трекер настрою
+    </h1>
+
+    <p class="lead text-center">
+        Запишіть свій настрій або найважливішу думку за сьогодні.
+    </p>
+
+    <textarea id="moodInput" class="form-control mb-3"
+        rows="3"
+        placeholder="Як ви себе почуваєте сьогодні?"></textarea>
+
+    <div class="text-center mb-3">
+        <button id="saveMood" class="btn btn-primary">
+            Зберегти настрій
+        </button>
+    </div>
+
+    <div id="moodList">
+        <div class="p-3 mb-3 bg-success text-white rounded">
+            😊 Бадьорий — маю багато енергії та бажання діяти.
+        </div>
+
+        <div class="p-3 mb-3 bg-info text-dark rounded">
+            😌 Спокійний — почуваюся врівноважено.
+        </div>
+
+        <div class="p-3 mb-3 bg-warning text-dark rounded">
+            😴 Втомлений — сьогодні хочеться відпочити.
+        </div>
+
+        <div class="p-3 mb-3 bg-primary text-white rounded">
+            🎯 Зосереджений — можу уважно працювати.
+        </div>
+
+        <div class="p-3 mb-3 bg-danger text-white rounded">
+            😁 Радісний — сьогодні є привід для усмішки.
+        </div>
+    </div>
+</div>
+
+<script>
+    const moodInput = document.getElementById("moodInput");
+    const moodList = document.getElementById("moodList");
+    const saveMood = document.getElementById("saveMood");
+
+    saveMood.addEventListener("click", function() {
+        const text = moodInput.value.trim();
+
+        if (text === "") {
+            return;
+        }
+
+        const newMood = document.createElement("div");
+        newMood.className = "p-3 mb-3 bg-light text-dark border rounded";
+        newMood.textContent = "📝 " + text;
+
+        moodList.prepend(newMood);
+        moodInput.value = "";
+    });
+</script>

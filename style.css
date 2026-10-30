@@ -1,0 +1,75 @@
+body {
+    background: linear-gradient(135deg, #CC5671, #4B0F1E);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    background-color: #F7D6DC;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(75, 15, 30, 0.3);
+}
+
+h1 {
+    color: #4B0F1E;
+    font-weight: bold;
+}
+
+p {
+    color: #6D1D32;
+}
+
+textarea {
+    resize: vertical;
+    border: 2px solid #CC5671;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+textarea:focus {
+    border-color: #8E2B44;
+    box-shadow: 0 0 5px #E07A94;
+}
+
+.btn-primary {
+    background-color: #8E2B44;
+    border-color: #8E2B44;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #4B0F1E;
+    border-color: #4B0F1E;
+}
+
+#moodList div {
+    font-size: 17px;
+    border-radius: 15px !important;
+    padding: 18px !important;
+    margin-bottom: 15px !important;
+}
+
+/* Кольори настрою */
+#moodList .bg-success {
+    background-color: #6D1D32 !important;
+}
+
+#moodList .bg-info {
+    background-color: #8E2B44 !important;
+    color: white !important;
+}
+
+#moodList .bg-warning {
+    background-color: #B23C59 !important;
+}
+
+#moodList .bg-primary {
+    background-color: #CC5671 !important;
+}
+
+#moodList .bg-danger {
+    background-color: #E07A94 !important;
+}
